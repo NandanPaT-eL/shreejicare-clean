@@ -20,7 +20,7 @@ export const SITE = {
   },
   tagline: "Care with compassion. Treatment with science.",
   serviceArea: "Serving patients from Nadiad, Anand, Kheda, Vadodara and across Gujarat.",
-  publishedUrl: "https://shreejicare.in",
+  publishedUrl: "https://shreejicancercare.in",
 };
 
 export const homeServices = [

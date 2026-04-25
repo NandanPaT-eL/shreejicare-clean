@@ -12,6 +12,9 @@ interface PageHeroProps {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  hideButterfly?: boolean;
+  butterflyPosition?: "left" | "right";
+  butterflyRotation?: string;
 }
 
 export const PageHero = ({
@@ -24,6 +27,9 @@ export const PageHero = ({
   primaryHref = "/contact",
   secondaryLabel,
   secondaryHref = "/",
+  hideButterfly = false,
+  butterflyPosition = "right",
+  butterflyRotation,
 }: PageHeroProps) => (
   <section className="bg-gradient-hero text-primary-foreground">
     <div className="container grid items-center gap-10 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:py-20">
@@ -55,13 +61,20 @@ export const PageHero = ({
             loading="eager"
           />
         </div>
-        {/* Butterfly positioned exactly as in original Hero */}
-        <img
-          src={butterfly}
-          alt=""
-          aria-hidden="true"
-          className="absolute -right-12 -top-12 w-36 opacity-40 pointer-events-none z-20 sm:-right-24 sm:-top-24 sm:w-80"
-        />
+        {/* Butterfly decoration */}
+        {!hideButterfly && (
+          <img
+            src={butterfly}
+            alt=""
+            aria-hidden="true"
+            className={`absolute w-36 opacity-40 pointer-events-none z-20 sm:w-80 ${
+              butterflyPosition === "left"
+                ? "-left-32 -top-4 sm:-left-72 sm:top-0"
+                : "-right-12 -top-12 sm:-right-24 sm:-top-24"
+            }`}
+            style={butterflyRotation ? { transform: `rotate(${butterflyRotation})` } : undefined}
+          />
+        )}
       </div>
     </div>
   </section>

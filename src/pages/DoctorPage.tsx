@@ -5,7 +5,6 @@ import { Seo } from "@/components/site/Seo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import doctorHero from "@/assets/doctor.png";
-import butterfly from "@/assets/butterfly.png";
 import { doctorExpertise, doctorFaqs } from "@/content/siteContent";
 
 const credentials = [
@@ -185,6 +184,8 @@ const DoctorPage = () => (
         imageAlt="Portrait of Dr. Shreyans Patel in a clinical setting"
         secondaryLabel="Book a Consultation"
         secondaryHref="/contact"
+        butterflyPosition="left"
+        butterflyRotation="-70deg"
       />
 
       {/* ── PROFILE: credentials + bio ── */}

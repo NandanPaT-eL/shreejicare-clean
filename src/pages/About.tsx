@@ -83,33 +83,63 @@ const About = () => (
       </section>
 
       <section className="bg-secondary/40 py-20">
-        <div className="container">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">Our Mission, Vision & Values</h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">A Gujarat where no cancer patient has to choose between quality care and being close to their family.</p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            <article className="rounded-2xl border border-border/70 bg-card p-6 shadow-card xl:col-span-2">
-              <h3 className="text-xl font-bold text-foreground">Our Mission</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">To deliver advanced, evidence-based cancer care that is accessible, affordable and deeply human — so every patient in Gujarat can receive world-class treatment without leaving their community.</p>
-            </article>
-            <article className="rounded-2xl border border-border/70 bg-card p-6 shadow-card xl:col-span-2">
-              <h3 className="text-xl font-bold text-foreground">Our Approach</h3>
-              <ul className="mt-3 space-y-3 text-sm leading-relaxed text-muted-foreground">
-                {aboutApproach.map((item) => (
-                  <li key={item}>• {item}</li>
-                ))}
-              </ul>
-            </article>
-            {aboutValues.map((value) => (
-              <article key={value.title} className="rounded-2xl border border-border/70 bg-card p-6 shadow-card">
-                <h3 className="text-xl font-bold text-foreground">{value.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{value.body}</p>
-              </article>
-            ))}
-          </div>
+  <div className="container">
+    <div className="mx-auto max-w-3xl text-center">
+      <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">Our Mission, Vision & Values</h2>
+      <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        A Gujarat where no cancer patient has to choose between quality care and being close to their family.
+      </p>
+    </div>
+    <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+
+      {/* Our Mission */}
+      <article className="group rounded-2xl border border-white/10 bg-hope-purple p-6 shadow-card transition-smooth hover:-translate-y-1 hover:bg-[hsl(309_74%_35%)] hover:shadow-soft xl:col-span-2">
+        <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-white transition-smooth group-hover:bg-white/30">
+          {/* Heart / mission icon */}
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+          </svg>
         </div>
-      </section>
+        <h3 className="text-xl font-bold text-white">Our Mission</h3>
+        <p className="mt-3 text-sm leading-relaxed text-white/80">
+          To deliver advanced, evidence-based cancer care that is accessible, affordable and deeply human — so every patient in Gujarat can receive world-class treatment without leaving their community.
+        </p>
+      </article>
+
+      {/* Our Approach */}
+      <article className="group rounded-2xl border border-white/10 bg-hope-purple p-6 shadow-card transition-smooth hover:-translate-y-1 hover:bg-[hsl(309_74%_35%)] hover:shadow-soft xl:col-span-2">
+        <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-white transition-smooth group-hover:bg-white/30">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold text-white">Our Approach</h3>
+        <ul className="mt-3 space-y-3 text-sm leading-relaxed text-white/80">
+          {aboutApproach.map((item) => (
+            <li key={item}>• {item}</li>
+          ))}
+        </ul>
+      </article>
+
+      {/* Dynamic Values */}
+      {aboutValues.map((value) => (
+        <article
+          key={value.title}
+          className="group rounded-2xl border border-white/10 bg-hope-purple p-6 shadow-card transition-smooth hover:-translate-y-1 hover:bg-[hsl(309_74%_35%)] hover:shadow-soft"
+        >
+          <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-white transition-smooth group-hover:bg-white/30">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-white">{value.title}</h3>
+          <p className="mt-3 text-sm leading-relaxed text-white/80">{value.body}</p>
+        </article>
+      ))}
+
+    </div>
+  </div>
+</section>
 
       <section className="bg-background py-20" lang="gu">
   <div className="container grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">

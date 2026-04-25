@@ -54,7 +54,7 @@ export const Footer = () => (
           src={butterfly}
           alt=""
           aria-hidden="true"
-          className="mt-6 w-28 opacity-20 pointer-events-none hidden md:block"
+          className="mt-6 w-48 opacity-20 pointer-events-none hidden md:block"
           style={{ transform: "rotate(-70deg)" }}
         />
       </nav>

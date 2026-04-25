@@ -11,8 +11,8 @@ import { doctorExpertise, doctorFaqs } from "@/content/siteContent";
 const credentials = [
   ["Designation", "Medical Oncologist"],
   ["DM Oncology", "JIPMER, Pondicherry"],
-  ["MD Medicine", "Mumbai"],
-  ["MBBS", "Vadodara"],
+  ["MD Medicine", "TNMC & Nair hospital, Mumbai"],
+  ["MBBS", "GMERS, Gotri, Vadodara"],
   ["ESMO Certification", "2024 (European Society for Medical Oncology)"],
   ["Languages", "Gujarati, Hindi, English"],
   ["Consultation Hours", "Mon–Sat: 10:00 AM – 7:00 PM | Sunday: By appointment"],

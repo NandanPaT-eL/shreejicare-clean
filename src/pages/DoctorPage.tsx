@@ -15,7 +15,7 @@ const credentials = [
   ["ESMO Certification", "2024 (European Society for Medical Oncology)"],
   ["Languages", "Gujarati, Hindi, English"],
   ["Consultation Hours", "Mon–Sat: 10:00 AM – 7:00 PM | Sunday: By appointment"],
-  ["Phone", "+91 85114 92789"],
+  ["Phone", "+91 70434 08583"],
 ];
 
 const doctorJsonLd = [

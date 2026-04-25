@@ -23,7 +23,7 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
       }
     >
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl lg:text-5xl">
             Get in Touch with{" "}
             <span className="inline bg-gradient-to-r from-[#52B788] to-[#6aaed6] px-[0.35em] py-[0.18em] text-white [border-radius:0.25rem] [box-decoration-break:clone] [-webkit-box-decoration-break:clone] leading-[1.6]">
@@ -47,7 +47,7 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
 
               <ul className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <li className="flex gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-hope-purple" />
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0" style={{ color: "#52B788" }} />
                   <span>
                     {SITE.addressLines.map((line) => (
                       <span key={line} className="block">
@@ -58,27 +58,27 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
                 </li>
 
                 <li className="flex gap-3">
-                  <Phone className="h-5 w-5 shrink-0 text-hope-purple" />
+                  <Phone className="h-5 w-5 shrink-0" style={{ color: "#52B788" }} />
                   <a
                     href={SITE.phoneHref}
-                    className="font-semibold text-foreground hover:text-hope-purple"
+                    className="font-semibold text-foreground transition-opacity hover:opacity-70"
                   >
                     {SITE.phoneDisplay}
                   </a>
                 </li>
 
                 <li className="flex gap-3">
-                  <Mail className="h-5 w-5 shrink-0 text-hope-purple" />
+                  <Mail className="h-5 w-5 shrink-0" style={{ color: "#52B788" }} />
                   <a
                     href={`mailto:${SITE.email}`}
-                    className="font-semibold text-foreground hover:text-hope-purple"
+                    className="font-semibold text-foreground transition-opacity hover:opacity-70"
                   >
                     {SITE.email}
                   </a>
                 </li>
 
                 <li className="flex gap-3">
-                  <Clock className="h-5 w-5 shrink-0 text-hope-purple" />
+                  <Clock className="h-5 w-5 shrink-0" style={{ color: "#52B788" }} />
                   <span>
                     {SITE.hours.weekday}
                     <br />
@@ -90,7 +90,8 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button
                   asChild
-                  className="rounded-full bg-hope-purple text-primary-foreground"
+                  className="rounded-full text-white transition-opacity hover:opacity-90"
+                  style={{ background: "linear-gradient(to right, #52B788, #6aaed6)" }}
                 >
                   <a href={SITE.mapShareUrl} target="_blank" rel="noreferrer">
                     Open Location
@@ -100,7 +101,8 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
                 <Button
                   asChild
                   variant="outline"
-                  className="rounded-full border-hope-purple/30 text-hope-purple"
+                  className="rounded-full transition-opacity hover:opacity-80"
+                  style={{ borderColor: "#52B788", color: "#52B788" }}
                 >
                   <a href={SITE.whatsappHref} target="_blank" rel="noreferrer">
                     <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
@@ -120,7 +122,7 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
             </div>
           </div>
 
-          {/* FORM SECTION (FIXED ONLY LOGIC, UI SAME) */}
+          {/* FORM SECTION */}
           <div className="rounded-3xl border border-border/70 bg-card p-8 shadow-card">
             <h3 className="text-2xl font-bold text-foreground">
               Book Your Appointment
@@ -142,7 +144,6 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
                 ) as HTMLInputElement;
                 const date = dateInput?.value;
 
-                // Set the date as a simple string (YYYY-MM-DD)
                 const dateField = form.querySelector(
                   '[name="entry.980550760"]',
                 ) as HTMLInputElement;
@@ -152,12 +153,10 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
 
                 setSubmitted(true);
 
-                // Reset form after submission
                 setTimeout(() => {
                   form.reset();
                 }, 1000);
 
-                // Hide success message after 5 seconds
                 setTimeout(() => {
                   setSubmitted(false);
                 }, 5000);
@@ -196,13 +195,13 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
                 </div>
               </div>
 
-              {/* Hidden field for date - sends as simple string */}
               <input type="hidden" name="entry.980550760" />
 
               <Button
                 type="submit"
                 size="lg"
-                className="h-12 rounded-full bg-hope-purple px-8 text-white"
+                className="h-12 rounded-full px-8 text-white transition-opacity hover:opacity-90"
+                style={{ background: "linear-gradient(to right, #52B788, #6aaed6)" }}
               >
                 Book My Appointment →
               </Button>

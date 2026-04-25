@@ -3,7 +3,7 @@ import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { Seo } from "@/components/site/Seo";
 import { LocationCTA } from "@/components/site/LocationCTA";
-import contactHero from "@/assets/contact-hero-v2.jpg";
+import contactHero from "@/assets/contact.png";
 
 const Contact = () => (
   <div className="min-h-screen bg-background">

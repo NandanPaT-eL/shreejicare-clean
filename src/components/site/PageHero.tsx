@@ -58,7 +58,7 @@ export const PageHero = ({
           src={butterfly}
           alt=""
           aria-hidden="true"
-          className="absolute -right-12 -top-12 w-36 opacity-40 pointer-events-none z-20 sm:-right-20 sm:-top-20 sm:w-80"
+          className="absolute -right-12 -top-12 w-36 opacity-40 pointer-events-none z-20 sm:-right-24 sm:-top-24 sm:w-80"
         />
       </div>
     </div>

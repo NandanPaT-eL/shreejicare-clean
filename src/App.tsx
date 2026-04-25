@@ -14,6 +14,8 @@ import NotFound from "./pages/NotFound.tsx";
 
 import { Analytics } from "@vercel/analytics/react"
 
+import { ScrollToTop } from "@/components/site/ScrollToTop";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

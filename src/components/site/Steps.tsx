@@ -36,7 +36,7 @@ export const Steps = () => (
                 height={768}
               />
             </div>
-            <p className="mb-1 text-sm font-bold uppercase tracking-wider text-hope-pink">
+            <p className="mb-1 text-sm font-bold uppercase tracking-wider text-[#52B788]">
               {item.step}
             </p>
             <h3 className="mb-3 text-2xl font-bold text-foreground">
@@ -50,18 +50,21 @@ export const Steps = () => (
       </div>
 
       <div className="mt-12 flex flex-wrap justify-center gap-3">
+        {/* Primary button with gradient */}
         <Button
           asChild
           size="lg"
-          className="h-12 rounded-full bg-hope-purple px-8 font-semibold text-primary-foreground hover:bg-[hsl(var(--primary-deep))]"
+          className="h-12 rounded-full bg-gradient-to-r from-[#52B788] to-[#6aaed6] px-8 font-semibold text-white shadow-md transition-all hover:shadow-lg hover:brightness-105"
         >
           <Link to="/contact">Book an Appointment</Link>
         </Button>
+
+        {/* Outline button - NO PINK EVER */}
         <Button
           asChild
           size="lg"
           variant="outline"
-          className="h-12 rounded-full border-hope-purple/30 px-8 font-semibold text-hope-purple hover:bg-hope-purple/5 hover:text-hope-purple"
+          className="h-12 rounded-full border-2 border-[#52B788] !bg-transparent px-8 font-semibold !text-[#52B788] transition-all hover:!border-transparent hover:!bg-gradient-to-r hover:from-[#52B788] hover:to-[#6aaed6] hover:!text-white focus:!border-[#52B788] focus:!outline-none focus:!ring-0 focus:!ring-offset-0 active:!bg-gradient-to-r"
         >
           <Link to="/contact">Find Our Clinic</Link>
         </Button>

@@ -1,9 +1,51 @@
+import { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/hero-consult.png";
+import hero2 from "@/assets/hero-consult-2.png";
+import hero3 from "@/assets/hero-consult-3.png";
 import butterfly from "@/assets/butterfly.png";
 import { Link } from "react-router-dom";
 
+const IMAGES = [
+  {
+    src: hero,
+    alt: "Dr. Shreyans Patel consulting with a patient at Shreeji Cancer Care in Nadiad",
+  },
+  {
+    src: hero2,
+    alt: "Cancer care treatment at Shreeji Cancer Care in Nadiad",
+  },
+  {
+    src: hero3,
+    alt: "Oncology consultation at Shreeji Cancer Care in Nadiad",
+  },
+];
+
+const INTERVAL_MS = 4000;
+
 export const Hero = () => {
+  const [current, setCurrent] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const goTo = useCallback(
+    (index: number) => {
+      if (isTransitioning || index === current) return;
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrent(index);
+        setIsTransitioning(false);
+      }, 300);
+    },
+    [current, isTransitioning]
+  );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % IMAGES.length);
+    }, INTERVAL_MS);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section
       id="home"
@@ -47,13 +89,36 @@ export const Hero = () => {
         {/* Photo + Butterfly */}
         <div className="relative">
           <div className="relative z-0 overflow-hidden rounded-[2rem] bg-white p-2 shadow-soft">
-            <img
-              src={hero}
-              alt="Dr. Shreyans Patel consulting with a patient at Shreeji Cancer Care in Nadiad"
-              className="aspect-[4/5] h-full w-full rounded-[1.6rem] object-cover"
-              width={1280}
-              height={1280}
-            />
+            {/* Slider images */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.6rem]">
+              {IMAGES.map((img, i) => (
+                <img
+                  key={i}
+                  src={img.src}
+                  alt={img.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-in-out"
+                  style={{ opacity: i === current ? 1 : 0 }}
+                  width={1280}
+                  height={1280}
+                />
+              ))}
+            </div>
+
+            {/* Dot indicators */}
+            <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+              {IMAGES.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => goTo(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i === current
+                      ? "w-6 bg-white"
+                      : "w-2 bg-white/50 hover:bg-white/75"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Butterfly IN FRONT of photo */}
@@ -63,13 +128,6 @@ export const Hero = () => {
             aria-hidden="true"
             className="absolute -right-12 -top-12 w-36 opacity-40 pointer-events-none z-20 sm:-right-20 sm:-top-20 sm:w-80"
           />
-
-          {/* Colored pills — centered below the image */}
-          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
-            <div className="h-3 w-24 rounded-full bg-[#3B82F6]" />
-            <div className="h-3 w-24 rounded-full bg-[#F59E0B]" />
-            <div className="h-3 w-24 rounded-full bg-[#22C55E]" />
-          </div>
         </div>
       </div>
     </section>

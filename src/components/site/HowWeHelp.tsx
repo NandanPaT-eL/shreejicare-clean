@@ -36,7 +36,8 @@ export const HowWeHelp = () => (
               key={service.title}
               className="group rounded-2xl border border-border/70 bg-card p-7 shadow-card transition-smooth hover:-translate-y-1 hover:shadow-soft"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-hope-purple">
+              {/* Icon container with gradient background and white icon */}
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-[#52B788] to-[#6aaed6] text-white">
                 <Icon className="h-7 w-7" strokeWidth={2} />
               </div>
               <h3 className="mb-2 text-xl font-bold text-foreground">
@@ -47,7 +48,7 @@ export const HowWeHelp = () => (
               </p>
               <Link
                 to="/treatments"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-hope-purple transition-smooth hover:gap-2.5"
+                className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-[#52B788] transition-smooth hover:gap-2.5"
               >
                 Learn More <ArrowRight className="h-4 w-4" />
               </Link>

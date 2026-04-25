@@ -54,7 +54,7 @@ export const homeSteps = [
   {
     step: "Step 1",
     title: "Book Your Appointment",
-    desc: "Simply book online or call our friendly team on +91 85114 92789 to choose a convenient time for your clinic visit.",
+    desc: "Simply book online or call our friendly team on +91 70434 08583 to choose a convenient time for your clinic visit.",
   },
   {
     step: "Step 2",

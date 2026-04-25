@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import logo from "@/assets/shreeji-logo.png";
+import logo from "@/assets/logo-footer.png";
 import butterfly from "@/assets/butterfly.png";
 import { SITE } from "@/content/siteContent";
 
@@ -24,9 +24,7 @@ export const Footer = () => (
 
     <div className="relative z-10 container grid gap-10 py-16 md:grid-cols-[1.2fr_0.8fr_0.9fr]">
       <div>
-        <div className="inline-block rounded-xl bg-white p-2">
-          <img src={logo} alt="Shreeji Cancer Care" className="h-12 w-auto" />
-        </div>
+        <img src={logo} alt="Shreeji Cancer Care" className="h-24 w-auto" />
         <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/75">
           A trusted oncology centre in Nadiad delivering advanced cancer
           treatment with compassion, ethics and the latest evidence-based
@@ -37,7 +35,7 @@ export const Footer = () => (
         </p>
       </div>
 
-      <div>
+      <div className="relative">
         <h4 className="mb-4 text-lg font-bold">Quick Links</h4>
         <ul className="grid gap-3 text-sm text-primary-foreground/85">
           {links.map((link) => (
@@ -51,6 +49,14 @@ export const Footer = () => (
             </li>
           ))}
         </ul>
+        {/* Butterfly below quick links — half of w-56 = w-28, rotated 90deg left */}
+        <img
+          src={butterfly}
+          alt=""
+          aria-hidden="true"
+          className="mt-6 w-28 opacity-20 pointer-events-none"
+          style={{ transform: "rotate(-70deg)" }}
+        />
       </div>
 
       <div>

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import doctor from "@/assets/doctor-portrait.png";
 import care from "@/assets/step-care.png";
-import aboutHero from "@/assets/about-hero.png";
+import aboutHero from "@/assets/about.png";
 import { SITE, aboutApproach, aboutValues, doctorExpertise, whyChoosePoints } from "@/content/siteContent";
 
 const About = () => (

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import portrait from "@/assets/doctor-portrait.png";
-import butterfly from "@/assets/butterfly-green.png";
 import { doctorQualifications } from "@/content/siteContent";
 
 export const Doctor = () => (
@@ -21,13 +20,6 @@ export const Doctor = () => (
             className="aspect-[4/5] w-full rounded-[1.6rem] object-cover"
           />
         </div>
-        {/* 🦋 Butterfly — same as hero */}
-        <img
-          src={butterfly}
-          alt=""
-          aria-hidden="true"
-          className="absolute -right-12 -top-12 w-36 opacity-40 pointer-events-none z-20 sm:-right-20 sm:-top-20 sm:w-80"
-        />
       </div>
 
       <div>
@@ -52,7 +44,8 @@ export const Doctor = () => (
         <Button
           asChild
           size="lg"
-          className="mt-8 h-12 rounded-full bg-hope-purple px-8 font-semibold text-primary-foreground hover:bg-[hsl(var(--primary-deep))]"
+          className="mt-8 h-12 rounded-full px-8 font-semibold text-white transition-opacity hover:opacity-90"
+          style={{ background: "linear-gradient(to right, #52B788, #6aaed6)" }}
         >
           <Link to="/doctor">Get to Know Us</Link>
         </Button>

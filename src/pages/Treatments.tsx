@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Seo } from "@/components/site/Seo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import treatmentsHero from "@/assets/treatments-hero.png";
+import treatmentsHero from "@/assets/treatments.png";
 import { detailedTreatments } from "@/content/siteContent";
 
 const Treatments = () => (
@@ -30,7 +30,7 @@ const Treatments = () => (
         <div className="container grid gap-6 lg:grid-cols-2">
           {detailedTreatments.map((treatment) => (
             <article key={treatment.title} className="rounded-3xl border border-border/70 bg-card p-8 shadow-card">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-hope-pink">{treatment.tagline}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-hope-purple">{treatment.tagline}</p>
               <h2 className="mt-3 text-2xl font-bold text-foreground">{treatment.title}</h2>
               <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{treatment.body}</p>
               <ul className="mt-6 space-y-3 text-sm text-foreground/85">

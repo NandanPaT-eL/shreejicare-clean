@@ -64,7 +64,7 @@ const DoctorPage = () => (
 
             {/* Bio + quote */}
             <div>
-              <h2 className="mb-5 text-2xl font-extrabold text-foreground">About Dr. Patel</h2>
+              <h2 className="mb-5 text-2xl font-extrabold text-foreground">About Dr. Shreyans Patel</h2>
               <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
                 <p>
                   Dr. Shreyans Patel completed his MBBS in Vadodara and MD in General Medicine in Mumbai before
@@ -136,7 +136,7 @@ const DoctorPage = () => (
       <section className="bg-[hsl(var(--primary)_/_0.08)] py-14">
         <div className="container flex flex-col items-center gap-5 text-center sm:flex-row sm:justify-between sm:text-left">
           <div>
-            <h2 className="text-2xl font-extrabold text-foreground">Ready to consult Dr. Patel?</h2>
+            <h2 className="text-2xl font-extrabold text-foreground">Ready to consult the Doctor?</h2>
             <p className="mt-1 text-sm text-muted-foreground">
               Mon–Sat 10 AM–7 PM · Sunday by appointment · Nadiad, Gujarat
             </p>

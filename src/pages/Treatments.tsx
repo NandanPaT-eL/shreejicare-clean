@@ -47,7 +47,7 @@ const Treatments = () => (
             <Link to="/contact">Book an Appointment</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="h-12 rounded-full border-hope-purple/30 px-8 font-semibold text-hope-purple hover:bg-hope-purple/5 hover:text-hope-purple">
-            <Link to="/doctor">Meet Dr. Patel</Link>
+            <Link to="/doctor">Meet Doctor</Link>
           </Button>
         </div>
       </section>

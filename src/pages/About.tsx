@@ -41,7 +41,7 @@ const About = () => (
               </p>
               <p className="text-lg font-semibold text-foreground">“No one should have to leave their home to fight for their life.”</p>
               <p>
-                After completing his DM in Medical Oncology from JIPMER, Pondicherry, Dr. Patel returned to Nadiad with a singular purpose: to build a centre that combines metro-level medical excellence with the warmth and accessibility of a hometown clinic. Shreeji Cancer Care is that promise, brought to life.
+                After completing his DM in Medical Oncology from JIPMER, Pondicherry, Dr. Shreyans Patel returned to Nadiad with a singular purpose: to build a centre that combines metro-level medical excellence with the warmth and accessibility of a hometown clinic. Shreeji Cancer Care is that promise, brought to life.
               </p>
             </div>
           </div>
@@ -162,7 +162,7 @@ const About = () => (
           </div>
           <div className="rounded-3xl bg-gradient-hero p-8 text-primary-foreground shadow-soft">
             <h3 className="text-2xl font-bold">Meet Dr. Shreyans Patel</h3>
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">Dr. Patel is known for his patient-first approach — clear communication, ethical counsel and steady support through every stage of treatment.</p>
+            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/85">Dr. Shreyans Patel is known for his patient-first approach — clear communication, ethical counsel and steady support through every stage of treatment.</p>
             <ul className="mt-6 space-y-3 text-sm text-primary-foreground/85">
               {doctorExpertise.map((item) => <li key={item}>• {item}</li>)}
             </ul>

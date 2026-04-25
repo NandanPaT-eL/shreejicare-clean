@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Shreeji Cancer Care",
-  phoneDisplay: "+91 85114 92789",
-  phoneHref: "tel:+918511492789",
-  whatsappHref: "https://wa.me/918511492789",
-  email: "shreysp94@gmail.com",
+  phoneDisplay: "+91 70434 08583",
+  phoneHref: "tel:+917043408583",
+  whatsappHref: "https://wa.me/917043408583",
+  email: "shreejicancercare@gmail.com",
   formAction: "https://formsubmit.co/shreysp94@gmail.com",
   addressLines: [
     "Shreeji Cancer Care",

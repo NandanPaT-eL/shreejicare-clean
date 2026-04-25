@@ -56,7 +56,7 @@ const Gallery = () => (
 
         <div className="container mt-14 rounded-[2rem] bg-gradient-hero px-8 py-12 text-center text-primary-foreground shadow-soft">
           <h2 className="text-3xl font-extrabold">Ready to Visit Us?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/85">See our facility in person, meet Dr. Patel and talk through your care plan with our team.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/85">See our facility in person, meet Dr. Shreyans Patel and talk through your care plan with our team.</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Button asChild className="rounded-full bg-white text-hope-purple hover:bg-white/90">
               <Link to="/contact">Book an Appointment</Link>

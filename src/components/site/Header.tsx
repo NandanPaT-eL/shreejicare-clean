@@ -39,7 +39,7 @@ export const Header = () => {
           <img
             src={logo}
             alt="Shreeji Cancer Care logo"
-            className="h-24 w-auto md:h-14 lg:h-20"
+            className="h-14 w-auto md:h-14 lg:h-20"
             width={200}
             height={200}
           />

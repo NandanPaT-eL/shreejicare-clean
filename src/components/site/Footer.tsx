@@ -24,7 +24,7 @@ export const Footer = () => (
 
     <div className="relative z-10 container grid gap-10 py-16 md:grid-cols-[1.2fr_0.8fr_0.9fr]">
       <div>
-        <img src={logo} alt="Shreeji Cancer Care" className="h-24 w-auto" />
+        <img src={logo} alt="Shreeji Cancer Care" className="h-24 w-auto" width={240} height={96} />
         <p className="mt-4 max-w-md text-sm leading-relaxed text-primary-foreground/75">
           A trusted oncology centre in Nadiad delivering advanced cancer
           treatment with compassion, ethics and the latest evidence-based
@@ -35,7 +35,7 @@ export const Footer = () => (
         </p>
       </div>
 
-      <div className="relative">
+      <nav className="relative" aria-label="Footer navigation">
         <h4 className="mb-4 text-lg font-bold">Quick Links</h4>
         <ul className="grid gap-3 text-sm text-primary-foreground/85">
           {links.map((link) => (
@@ -57,7 +57,7 @@ export const Footer = () => (
           className="mt-6 w-28 opacity-20 pointer-events-none"
           style={{ transform: "rotate(-70deg)" }}
         />
-      </div>
+      </nav>
 
       <div>
         <h4 className="mb-4 text-lg font-bold">Get in Touch</h4>

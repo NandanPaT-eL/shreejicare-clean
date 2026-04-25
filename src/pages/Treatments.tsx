@@ -7,12 +7,105 @@ import { Link } from "react-router-dom";
 import treatmentsHero from "@/assets/treatments.png";
 import { detailedTreatments } from "@/content/siteContent";
 
+const treatmentsJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": "https://shreejicancercare.in/treatments#webpage",
+    url: "https://shreejicancercare.in/treatments",
+    name: "Cancer Treatments in Nadiad – Chemotherapy, Immunotherapy & More | Shreeji Cancer Care",
+    description:
+      "Explore advanced cancer treatments at Shreeji Cancer Care, Nadiad — chemotherapy day care, targeted therapy, immunotherapy, blood cancer treatment, paediatric oncology, palliative care and cancer screening.",
+    isPartOf: { "@id": "https://shreejicancercare.in/#website" },
+    about: { "@id": "https://shreejicancercare.in/#organization" },
+    medicalAudience: {
+      "@type": "MedicalAudience",
+      audienceType: "Patient",
+    },
+    inLanguage: "en-IN",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://shreejicancercare.in/#organization",
+    name: "Shreeji Cancer Care",
+    url: "https://shreejicancercare.in",
+    medicalSpecialty: "Oncology",
+    availableService: [
+      {
+        "@type": "MedicalTherapy",
+        name: "Comprehensive Cancer Consultation",
+        description: "Thorough evaluation of diagnosis, reports and medical history with a personalised treatment plan.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Day Care Chemotherapy",
+        description: "Comfortable and safe day-care chemotherapy designed to minimise hospital stay.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Targeted Therapy & Immunotherapy",
+        description: "Precision medicine targeting cancer cells while preserving healthy tissue.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Blood Cancer Treatment",
+        description: "Expert care for Leukaemia, Lymphoma and Multiple Myeloma using evidence-based protocols.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Paediatric Oncology",
+        description: "Specialised cancer treatment for children with a gentle, family-centred approach.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Palliative & Supportive Care",
+        description: "Pain management, nutritional support, fatigue reduction and emotional wellbeing.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Multidisciplinary Tumour Board",
+        description: "Collaborative review for complex diagnoses with oncologists, radiologists, surgeons and pathologists.",
+      },
+      {
+        "@type": "MedicalTherapy",
+        name: "Second Opinion Services",
+        description: "Comprehensive, honest second opinion service with independent perspective.",
+      },
+      {
+        "@type": "MedicalTest",
+        name: "Cancer Screening & Early Detection",
+        description: "Comprehensive screening for breast, cervical, colorectal and oral cancers.",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://shreejicancercare.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Treatments",
+        item: "https://shreejicancercare.in/treatments",
+      },
+    ],
+  },
+];
+
 const Treatments = () => (
   <div className="min-h-screen bg-background">
     <Seo
       title="Cancer Treatments in Nadiad – Chemotherapy, Immunotherapy & More | Shreeji Cancer Care"
       description="Explore advanced cancer treatments at Shreeji Cancer Care, Nadiad — chemotherapy day care, targeted therapy, immunotherapy, blood cancer treatment, paediatric oncology, palliative care and cancer screening."
       canonicalPath="/treatments"
+      jsonLd={treatmentsJsonLd}
     />
     <Header />
     <main>

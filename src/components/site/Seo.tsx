@@ -5,50 +5,62 @@ interface SeoProps {
   description: string;
   canonicalPath?: string;
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
+  noindex?: boolean;
 }
 
-const ensureMeta = (selector: string, attr: "name" | "property", value: string) => {
-  let element = document.head.querySelector<HTMLMetaElement>(selector);
-  if (!element) {
-    element = document.createElement("meta");
-    element.setAttribute(attr, selector.includes('property=') ? selector.match(/property="([^"]+)"/)?.[1] ?? value : value);
-    document.head.appendChild(element);
+const SITE_URL = "https://shreejicancercare.in";
+const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
+const setMeta = (attr: "name" | "property", key: string, value: string) => {
+  const selector = `meta[${attr}="${key}"]`;
+  let el = document.head.querySelector<HTMLMetaElement>(selector);
+  if (!el) {
+    el = document.createElement("meta");
+    el.setAttribute(attr, key);
+    document.head.appendChild(el);
   }
-  return element;
+  el.content = value;
 };
 
-export const Seo = ({ title, description, canonicalPath = "/", jsonLd }: SeoProps) => {
+export const Seo = ({ title, description, canonicalPath = "/", jsonLd, noindex = false }: SeoProps) => {
   useEffect(() => {
+    // Title
     document.title = title;
 
-    let desc = document.head.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (!desc) {
-      desc = document.createElement("meta");
-      desc.name = "description";
-      document.head.appendChild(desc);
-    }
-    desc.content = description;
+    // Description
+    setMeta("name", "description", description);
 
+    // Robots
+    setMeta("name", "robots", noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+
+    // Canonical
+    const fullUrl = `${SITE_URL}${canonicalPath}`;
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement("link");
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = `https://shreejicancercare.in${canonicalPath}`;
+    canonical.href = fullUrl;
 
-    const ogTitle = ensureMeta('meta[property="og:title"]', "property", "og:title");
-    ogTitle.content = title;
+    // Open Graph
+    setMeta("property", "og:title", title);
+    setMeta("property", "og:description", description);
+    setMeta("property", "og:url", fullUrl);
+    setMeta("property", "og:image", OG_IMAGE);
+    setMeta("property", "og:image:alt", title);
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:site_name", "Shreeji Cancer Care");
+    setMeta("property", "og:locale", "en_IN");
 
-    const ogDescription = ensureMeta('meta[property="og:description"]', "property", "og:description");
-    ogDescription.content = description;
+    // Twitter Card
+    setMeta("name", "twitter:title", title);
+    setMeta("name", "twitter:description", description);
+    setMeta("name", "twitter:image", OG_IMAGE);
+    setMeta("name", "twitter:image:alt", title);
+    setMeta("name", "twitter:card", "summary_large_image");
 
-    const twitterTitle = ensureMeta('meta[name="twitter:title"]', "name", "twitter:title");
-    twitterTitle.content = title;
-
-    const twitterDescription = ensureMeta('meta[name="twitter:description"]', "name", "twitter:description");
-    twitterDescription.content = description;
-
+    // JSON-LD
     let script = document.getElementById("page-jsonld") as HTMLScriptElement | null;
     if (jsonLd) {
       if (!script) {
@@ -61,7 +73,7 @@ export const Seo = ({ title, description, canonicalPath = "/", jsonLd }: SeoProp
     } else if (script) {
       script.remove();
     }
-  }, [title, description, canonicalPath, jsonLd]);
+  }, [title, description, canonicalPath, jsonLd, noindex]);
 
   return null;
 };

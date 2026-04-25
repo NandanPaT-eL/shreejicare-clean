@@ -98,8 +98,9 @@ export const Hero = () => {
                   alt={img.alt}
                   className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ease-in-out"
                   style={{ opacity: i === current ? 1 : 0 }}
-                  width={1280}
+                  width={1024}
                   height={1280}
+                  {...(i === 0 ? { fetchPriority: "high" as const, loading: "eager" as const } : { loading: "lazy" as const })}
                 />
               ))}
             </div>

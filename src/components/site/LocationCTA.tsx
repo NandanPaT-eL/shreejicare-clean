@@ -118,6 +118,8 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
                 className="h-[320px] w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                allow="fullscreen"
+                allowFullScreen
               />
             </div>
           </div>
@@ -207,7 +209,7 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
               </Button>
             </form>
 
-            <iframe name="hidden_iframe" style={{ display: "none" }} />
+            <iframe name="hidden_iframe" title="Form submission target" style={{ display: "none" }} />
 
             {submitted && (
               <p className="mt-4 text-sm text-green-600">

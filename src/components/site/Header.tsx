@@ -40,10 +40,12 @@ export const Header = () => {
             src={logo}
             alt="Shreeji Cancer Care logo"
             className="h-24 w-auto md:h-14 lg:h-20"
+            width={200}
+            height={200}
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -65,7 +67,8 @@ export const Header = () => {
           <button
             onClick={() => setOpen((value) => !value)}
             className="rounded-md p-2 text-hope-purple lg:hidden"
-            aria-label="Menu"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -73,7 +76,7 @@ export const Header = () => {
       </div>
 
       {open ? (
-        <div className="border-t border-border/60 bg-background lg:hidden">
+        <nav className="border-t border-border/60 bg-background lg:hidden" aria-label="Mobile navigation">
           <div className="container flex flex-col gap-2 py-4">
             {nav.map((item) => (
               <Link
@@ -94,7 +97,7 @@ export const Header = () => {
               </Link>
             </Button>
           </div>
-        </div>
+        </nav>
       ) : null}
     </header>
   );

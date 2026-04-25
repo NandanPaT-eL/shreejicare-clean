@@ -9,12 +9,46 @@ import care from "@/assets/step-care.png";
 import aboutHero from "@/assets/about.png";
 import { SITE, aboutApproach, aboutValues, doctorExpertise, whyChoosePoints } from "@/content/siteContent";
 
+const aboutJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://shreejicancercare.in/about#webpage",
+    url: "https://shreejicancercare.in/about",
+    name: "About Us – Shreeji Cancer Care | Dr. Shreyans Patel, Oncologist, Nadiad",
+    description:
+      "Meet Dr. Shreyans Patel, JIPMER-trained and ESMO-certified medical oncologist in Nadiad. Learn how Shreeji Cancer Care was founded to bring world-class cancer treatment close to home in Gujarat.",
+    isPartOf: { "@id": "https://shreejicancercare.in/#website" },
+    about: { "@id": "https://shreejicancercare.in/#organization" },
+    inLanguage: "en-IN",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://shreejicancercare.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About Us",
+        item: "https://shreejicancercare.in/about",
+      },
+    ],
+  },
+];
+
 const About = () => (
   <div className="min-h-screen bg-background">
     <Seo
       title="About Us – Shreeji Cancer Care | Dr. Shreyans Patel, Oncologist, Nadiad"
       description="Meet Dr. Shreyans Patel, JIPMER-trained and ESMO-certified medical oncologist in Nadiad. Learn how Shreeji Cancer Care was founded to bring world-class cancer treatment close to home in Gujarat."
       canonicalPath="/about"
+      jsonLd={aboutJsonLd}
     />
     <Header />
     <main>
@@ -39,7 +73,7 @@ const About = () => (
               <p>
                 For Dr. Shreyans Patel, oncology is not just a profession — it is a deeply personal mission. Growing up in Nadiad, he witnessed patients and families travelling hours to larger cities for cancer treatment while already carrying physical, emotional and financial strain.
               </p>
-              <p className="text-lg font-semibold text-foreground">“No one should have to leave their home to fight for their life.”</p>
+              <p className="text-lg font-semibold text-foreground">"No one should have to leave their home to fight for their life."</p>
               <p>
                 After completing his DM in Medical Oncology from JIPMER, Pondicherry, Dr. Shreyans Patel returned to Nadiad with a singular purpose: to build a centre that combines metro-level medical excellence with the warmth and accessibility of a hometown clinic. Shreeji Cancer Care is that promise, brought to life.
               </p>
@@ -77,7 +111,7 @@ const About = () => (
         </div>
       </section>
 
-      <section className="bg-background py-20">
+      <section className="bg-background py-20" lang="gu">
   <div className="container grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
     <div>
       <h2 className="text-3xl font-extrabold leading-tight text-foreground sm:text-4xl">
@@ -86,7 +120,7 @@ const About = () => (
 
       <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
         <p className="text-xl font-semibold text-foreground">
-          “એક આશાની પાંખોવાળી કહાની”
+          "એક આશાની પાંખોવાળી કહાની"
         </p>
 
         <p className="text-lg font-medium text-foreground">
@@ -95,7 +129,7 @@ const About = () => (
 
         <div className="space-y-4">
           <p>
-            જ્યારે જીવનમાં “કૅન્સર” શબ્દ આવે છે, ત્યારે ઘણાં માટે તે ભય, અનિશ્ચિતતા અને દુઃખ સાથે જોડાયેલો હોય છે. 
+            જ્યારે જીવનમાં "કૅન્સર" શબ્દ આવે છે, ત્યારે ઘણાં માટે તે ભય, અનિશ્ચિતતા અને દુઃખ સાથે જોડાયેલો હોય છે. 
             પરંતુ Shreeji Cancer Care એ આ શબ્દને એક નવો અર્થ આપ્યો છે — આશા, સંભાળ અને વિશ્વાસ.
           </p>
 
@@ -113,7 +147,7 @@ const About = () => (
 
           <p>
             <strong className="text-foreground">નારંગી રંગ</strong> ઊર્જા અને આશાનું પ્રતીક છે — જે કહે છે: 
-            <span className="block italic mt-1">“અંધારાં પછી ઉજાસ જરૂર આવે છે.”</span>
+            <span className="block italic mt-1">"અંધારાં પછી ઉજાસ જરૂર આવે છે."</span>
           </p>
 
           <p>
@@ -127,7 +161,7 @@ const About = () => (
           <p>
             અહીં મશીનો સાથે માનવતા જોડાયેલી છે, દવાઓ સાથે હિંમત મળે છે, અને દરેક દર્દીને કહેવામાં આવે છે —
             <span className="block font-semibold text-foreground mt-1">
-              “તમે એકલા નથી, અમે તમારી સાથે છીએ.”
+              "તમે એકલા નથી, અમે તમારી સાથે છીએ."
             </span>
           </p>
 

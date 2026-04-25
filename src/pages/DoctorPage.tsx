@@ -19,12 +19,160 @@ const credentials = [
   ["Phone", "+91 85114 92789"],
 ];
 
+const doctorJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://shreejicancercare.in/doctor#webpage",
+    url: "https://shreejicancercare.in/doctor",
+    name: "Dr. Shreyans Patel – Medical Oncologist in Nadiad, Gujarat | Shreeji Cancer Care",
+    description:
+      "Dr. Shreyans Patel is a JIPMER-trained, ESMO-certified medical oncologist at Shreeji Cancer Care, Nadiad, specialising in solid tumours, blood cancers, paediatric oncology and immunotherapy.",
+    isPartOf: { "@id": "https://shreejicancercare.in/#website" },
+    mainEntity: { "@id": "https://shreejicancercare.in/doctor#physician" },
+    inLanguage: "en-IN",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "@id": "https://shreejicancercare.in/doctor#physician",
+    name: "Dr. Shreyans Patel",
+    url: "https://shreejicancercare.in/doctor",
+    image: "https://shreejicancercare.in/og-image.png",
+    jobTitle: "Medical Oncologist",
+    description:
+      "JIPMER-trained, ESMO-certified medical oncologist specialising in solid tumours, blood cancers, paediatric oncology, chemotherapy, targeted therapy and immunotherapy.",
+    telephone: "+918511492789",
+    medicalSpecialty: [
+      "Oncology",
+      "Hematology",
+      "Pediatric Oncology",
+    ],
+    availableService: [
+      { "@type": "MedicalTherapy", name: "Chemotherapy" },
+      { "@type": "MedicalTherapy", name: "Targeted Therapy" },
+      { "@type": "MedicalTherapy", name: "Immunotherapy" },
+      { "@type": "MedicalTherapy", name: "Blood Cancer Treatment" },
+      { "@type": "MedicalTherapy", name: "Paediatric Oncology" },
+      { "@type": "MedicalTherapy", name: "Palliative Care" },
+    ],
+    alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "JIPMER, Pondicherry",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "TNMC & Nair Hospital, Mumbai",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "GMERS, Gotri, Vadodara",
+      },
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "DM Medical Oncology",
+        recognizedBy: { "@type": "EducationalOrganization", name: "JIPMER, Pondicherry" },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "MD Medicine",
+        recognizedBy: { "@type": "EducationalOrganization", name: "TNMC & Nair Hospital, Mumbai" },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "ESMO Certification",
+        recognizedBy: { "@type": "Organization", name: "European Society for Medical Oncology" },
+        dateCreated: "2024",
+      },
+    ],
+    worksFor: { "@id": "https://shreejicancercare.in/#organization" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "A-1, Kirtikunj Society, V.K.V Road",
+      addressLocality: "Nadiad",
+      addressRegion: "Gujarat",
+      postalCode: "387001",
+      addressCountry: "IN",
+    },
+    knowsLanguage: ["Gujarati", "Hindi", "English"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://shreejicancercare.in/doctor#faq",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What cancers does Dr. Patel treat?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Dr. Patel treats all major solid tumours and blood cancers, including breast, lung, colon, cervical cancers, blood cancers and paediatric oncology.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where does Dr. Patel see patients?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "All consultations and treatments are provided at Shreeji Cancer Care in Nadiad, where patients can access organised clinic-based oncology care and follow-up.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I get a second opinion from Dr. Patel?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. We offer an initial second-opinion consultation. Bring your reports, scans and previous treatment records.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does he treat children with cancer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Dr. Patel has specialised training in paediatric oncology and treats children with a gentle, family-centred approach.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is ESMO Certification?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "ESMO certification reflects training aligned with international standards of cancer care — helping ensure your treatment follows global best practices.",
+        },
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://shreejicancercare.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Doctor",
+        item: "https://shreejicancercare.in/doctor",
+      },
+    ],
+  },
+];
+
 const DoctorPage = () => (
   <div className="min-h-screen bg-background">
     <Seo
       title="Dr. Shreyans Patel – Medical Oncologist in Nadiad, Gujarat | Shreeji Cancer Care"
       description="Dr. Shreyans Patel is a JIPMER-trained, ESMO-certified medical oncologist at Shreeji Cancer Care, Nadiad, specialising in solid tumours, blood cancers, paediatric oncology and immunotherapy."
       canonicalPath="/doctor"
+      jsonLd={doctorJsonLd}
     />
     <Header />
 
@@ -104,7 +252,7 @@ const DoctorPage = () => (
                   className="flex items-center gap-3 rounded-2xl border border-border/70 bg-card px-4 py-3.5 text-sm font-semibold text-foreground shadow-card"
                 >
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--primary)_/_0.12)] text-[hsl(var(--primary))]">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                       <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>

@@ -49,8 +49,10 @@ export const PageHero = ({
             src={imageSrc}
             alt={imageAlt}
             className="aspect-[4/5] w-full rounded-[1.6rem] object-cover"
-            width={1280}
+            width={1024}
             height={1280}
+            fetchPriority="high"
+            loading="eager"
           />
         </div>
         {/* Butterfly positioned exactly as in original Hero */}

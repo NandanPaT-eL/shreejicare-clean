@@ -96,7 +96,7 @@ const doctorJsonLd = [
       postalCode: "387001",
       addressCountry: "IN",
     },
-    knowsLanguage: ["Gujarati", "Hindi", "English"],
+    knowsLanguage: ["Gujarati", "Hindi", "English", "Tamil", "Marathi"],
   },
   {
     "@context": "https://schema.org",

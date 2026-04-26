@@ -140,7 +140,7 @@ export const doctorQualifications = [
   "MD - TNMC & Nair hospital, Mumbai",
   "MBBS - GMERS, Gotri, Vadodara",
   "ESMO Certified (2024)",
-  "Languages — Gujarati, Hindi, English",
+  "Languages — Gujarati, Hindi, English, Tamil, Marathi",
 ];
 
 export const doctorExpertise = [

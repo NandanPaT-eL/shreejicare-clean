@@ -15,7 +15,7 @@ export const SITE = {
   mapShareUrl: "https://www.google.com/maps/place/Shreeji+Cancer+Care+(Dr.+Shreyans+Patel)/@22.6844849,72.8662637,17z",
   mapEmbedUrl: "https://www.google.com/maps?q=22.6844849,72.8662637&z=17&output=embed",
   hours: {
-    weekday: "Mon – Sat · 10:00 AM – 7:00 PM",
+    weekday: "Mon – Sat · 10:00 AM – 8:00 PM",
     sunday: "Sunday · By appointment only",
   },
   tagline: "Care with compassion. Treatment with science.",

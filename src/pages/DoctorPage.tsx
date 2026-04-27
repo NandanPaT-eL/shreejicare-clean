@@ -13,7 +13,7 @@ const credentials = [
   ["MD Medicine", "TNMC & Nair hospital, Mumbai"],
   ["MBBS", "GMERS, Gotri, Vadodara"],
   ["ESMO Certification", "2024 (European Society for Medical Oncology)"],
-  ["Languages", "Gujarati, Hindi, English"],
+  ["Languages", "Gujarati, Hindi, English, Tamil, Marathi"],
   ["Consultation Hours", "Mon–Sat: 10:00 AM – 8:00 PM | Sunday: By appointment"],
   ["Phone", "+91 70434 08583"],
 ];

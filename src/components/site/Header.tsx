@@ -10,8 +10,8 @@ const nav = [
   { label: "About", href: "/about" },
   { label: "Treatments", href: "/treatments" },
   { label: "Doctor", href: "/doctor" },
-  // { label: "Gallery", href: "/gallery" },
-  // { label: "Reviews", href: "/reviews" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Contact", href: "/contact" },
 ];
 

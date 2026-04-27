@@ -123,7 +123,7 @@ const Index = () => {
         <Hero />
         <HowWeHelp />
         <Steps />
-        {/* <Reviews /> */}
+        <Reviews />
         <WhyChoose />
         <Doctor />
         <LocationCTA />

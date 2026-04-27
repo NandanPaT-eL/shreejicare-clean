@@ -122,7 +122,11 @@ const Treatments = () => (
       <section className="bg-background py-20">
         <div className="container grid gap-6 lg:grid-cols-2">
           {detailedTreatments.map((treatment) => (
-            <article key={treatment.title} className="rounded-3xl border border-border/70 bg-card p-8 shadow-card">
+            <article 
+              key={treatment.title} 
+              id={treatment.title.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}
+              className="rounded-3xl border border-border/70 bg-card p-8 shadow-card scroll-mt-24"
+            >
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-hope-purple">{treatment.tagline}</p>
               <h2 className="mt-3 text-2xl font-bold text-foreground">{treatment.title}</h2>
               <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{treatment.body}</p>

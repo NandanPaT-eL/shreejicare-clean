@@ -5,7 +5,7 @@ import { Seo } from "@/components/site/Seo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import doctorHero from "@/assets/doctor.png";
-import { doctorExpertise, doctorFaqs } from "@/content/siteContent";
+import { doctorExpertise, doctorFaqs, doctorAchievements, doctorPublications } from "@/content/siteContent";
 
 const credentials = [
   ["Designation", "Medical Oncologist"],
@@ -234,6 +234,57 @@ const DoctorPage = () => (
                 </p>
                 <footer className="mt-3 text-sm font-medium text-muted-foreground">— Dr. Shreyans Patel</footer>
               </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ACHIEVEMENTS + PUBLICATIONS ── */}
+      <section className="bg-background py-16">
+        <div className="container">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+            {/* Achievements */}
+            <div>
+              <h2 className="mb-6 text-2xl font-extrabold text-foreground flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-hope-purple/10 text-hope-purple">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+                </span>
+                Achievements
+              </h2>
+              <div className="space-y-4">
+                {doctorAchievements.map((achievement, index) => (
+                  <div 
+                    key={index}
+                    className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-6 shadow-card transition-all hover:border-hope-purple/30 hover:shadow-lg"
+                  >
+                    <div className="absolute top-0 left-0 h-full w-1 bg-hope-purple/20 transition-all group-hover:bg-hope-purple" />
+                    <p className="text-[15px] font-medium leading-relaxed text-foreground">{achievement}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Publications */}
+            <div>
+              <h2 className="mb-6 text-2xl font-extrabold text-foreground flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-hope-purple/10 text-hope-purple">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M8 7h6"></path><path d="M8 11h8"></path></svg>
+                </span>
+                Publications
+              </h2>
+              <div className="space-y-4">
+                {doctorPublications.map((pub, index) => (
+                  <div 
+                    key={index}
+                    className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-6 shadow-card transition-all hover:border-hope-purple/30 hover:shadow-lg"
+                  >
+                    <div className="absolute top-0 left-0 h-full w-1 bg-hope-purple/20 transition-all group-hover:bg-hope-purple" />
+                    <p className="text-[14px] leading-relaxed text-muted-foreground italic">
+                      {pub}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

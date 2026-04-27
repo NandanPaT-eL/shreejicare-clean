@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-consult.png";
 import butterfly from "@/assets/butterfly.png"; // Import butterfly image
 
@@ -39,11 +40,11 @@ export const PageHero = ({
         <p className="max-w-2xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">{description}</p>
         <div className="flex flex-wrap gap-3 pt-1">
           <Button asChild size="lg" className="h-12 rounded-full bg-white px-7 font-semibold text-hope-purple shadow-soft hover:bg-white/90">
-            <a href={primaryHref}>{primaryLabel}</a>
+            <Link to={primaryHref}>{primaryLabel}</Link>
           </Button>
           {secondaryLabel ? (
             <Button asChild size="lg" variant="outline" className="h-12 rounded-full border-white/70 bg-transparent px-7 font-semibold text-primary-foreground hover:bg-white/10 hover:text-primary-foreground">
-              <a href={secondaryHref}>{secondaryLabel}</a>
+              <Link to={secondaryHref}>{secondaryLabel}</Link>
             </Button>
           ) : null}
         </div>

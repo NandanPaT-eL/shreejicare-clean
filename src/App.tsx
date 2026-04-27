@@ -7,9 +7,9 @@ import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
 import Treatments from "./pages/Treatments.tsx";
 import DoctorPage from "./pages/DoctorPage.tsx";
-// import Gallery from "./pages/Gallery.tsx";
+import Gallery from "./pages/Gallery.tsx";
 import Contact from "./pages/Contact.tsx";
-// import ReviewsPage from "./pages/ReviewsPage.tsx";
+import ReviewsPage from "./pages/ReviewsPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 import { Analytics } from "@vercel/analytics/react"
@@ -30,9 +30,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/doctor" element={<DoctorPage />} />
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/reviews" element={<ReviewsPage />} /> */}
+          <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

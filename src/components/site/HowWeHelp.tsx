@@ -47,7 +47,11 @@ export const HowWeHelp = () => (
                 {service.desc}
               </p>
               <Link
-                to="/treatments"
+                to={`/treatments#${service.title === "Chemotherapy Day Care" ? "day-care-chemotherapy" : 
+                    service.title === "Cancer Screening" ? "cancer-screening-early-detection" :
+                    service.title === "Second Opinion" ? "second-opinion-services" :
+                    service.title === "Pediatric Oncology" ? "paediatric-oncology" :
+                    service.title.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}`}
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-[#52B788] transition-smooth hover:gap-2.5"
               >
                 Learn More <ArrowRight className="h-4 w-4" />

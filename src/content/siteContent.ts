@@ -153,6 +153,15 @@ export const doctorExpertise = [
   "Second opinion services",
 ];
 
+export const doctorAchievements = [
+  "Winner at “South zone oncology quiz – 2023” at RCC Trivandrum.",
+  "Poster presentation “Efficacy of weekly paclitaxel with fixed dose of oral cyclophosphamide as metronomic chemotherapy in locally advanced and metastatic gastric carcinoma – phase 2 study” at 3rd national conference on Real World Evidence (RWE) in oncology at VIMS, Bengaluru",
+];
+
+export const doctorPublications = [
+  "Patel S, Keerthivasagam S, Goyal H, Manivannan P, Sriram S, Govindaswamy Ramamoorthy J, Ganguly S, Dubashi B, Kayal S, Ganesan P. Burkitt Lymphoma in a Child With Down Syndrome: A Rare Clinical Association. Pediatr Blood Cancer. 2025 Sep;72(9):e31869. doi: 10.1002/pbc.31869. Epub 2025 Jun 23. PMID: 40551358.",
+];
+
 export const doctorFaqs = [
   {
     q: "What cancers does Dr. Patel treat?",

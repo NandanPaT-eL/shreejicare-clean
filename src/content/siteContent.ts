@@ -154,6 +154,7 @@ export const doctorExpertise = [
 ];
 
 export const doctorAchievements = [
+  "Secured All India Rank (AIR) 3 in the Institute of National Importance Super Speciality (INI-SS) entrance examination for DM Medical Oncology.",
   "Winner at “South zone oncology quiz – 2023” at RCC Trivandrum.",
   "Poster presentation “Efficacy of weekly paclitaxel with fixed dose of oral cyclophosphamide as metronomic chemotherapy in locally advanced and metastatic gastric carcinoma – phase 2 study” at 3rd national conference on Real World Evidence (RWE) in oncology at VIMS, Bengaluru",
 ];

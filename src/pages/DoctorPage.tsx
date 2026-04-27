@@ -9,7 +9,7 @@ import { doctorExpertise, doctorFaqs, doctorAchievements, doctorPublications } f
 
 const credentials = [
   ["Designation", "Medical Oncologist"],
-  ["DM Medical Oncology", "JIPMER, Pondicherry"],
+  ["DM Medical Oncology", "JIPMER, Pondicherry (All India Rank 3, INI-SS)"],
   ["MD Medicine", "TNMC & Nair hospital, Mumbai"],
   ["MBBS", "GMERS, Gotri, Vadodara"],
   ["ESMO Certification", "2024 (European Society for Medical Oncology)"],
@@ -26,7 +26,7 @@ const doctorJsonLd = [
     url: "https://shreejicancercare.in/doctor",
     name: "Dr. Shreyans Patel – Medical Oncologist in Nadiad, Gujarat | Shreeji Cancer Care",
     description:
-      "Dr. Shreyans Patel is a JIPMER-trained, ESMO-certified medical oncologist at Shreeji Cancer Care, Nadiad, specialising in solid tumours, blood cancers, paediatric oncology and immunotherapy.",
+      "Dr. Shreyans Patel is a JIPMER-trained (AIR 3), ESMO-certified medical oncologist at Shreeji Cancer Care, Nadiad, specialising in solid tumours, blood cancers, paediatric oncology and immunotherapy.",
     isPartOf: { "@id": "https://shreejicancercare.in/#website" },
     mainEntity: { "@id": "https://shreejicancercare.in/doctor#physician" },
     inLanguage: "en-IN",
@@ -40,7 +40,7 @@ const doctorJsonLd = [
     image: "https://shreejicancercare.in/og-image.png",
     jobTitle: "Medical Oncologist",
     description:
-      "JIPMER-trained, ESMO-certified medical oncologist specialising in solid tumours, blood cancers, paediatric oncology, chemotherapy, targeted therapy and immunotherapy.",
+      "JIPMER-trained (All India Rank 3), ESMO-certified medical oncologist specialising in solid tumours, blood cancers, paediatric oncology, chemotherapy, targeted therapy and immunotherapy.",
     telephone: "+918511492789",
     medicalSpecialty: [
       "Oncology",
@@ -218,7 +218,7 @@ const DoctorPage = () => (
                 <p>
                   Dr. Shreyans Patel completed his MBBS in Vadodara and MD in General Medicine in Mumbai before
                   pursuing his passion for oncology with a DM in Medical Oncology from JIPMER, Pondicherry —
-                  one of India's most respected medical institutions.
+                  one of India's most respected medical institutions, where he secured a prestigious All India Rank (AIR) 3 in the national entrance exam.
                 </p>
                 <p>
                   In 2024 he earned ESMO certification, aligning his practice with the highest international

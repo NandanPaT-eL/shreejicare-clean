@@ -9,7 +9,7 @@ import { doctorExpertise, doctorFaqs, doctorAchievements, doctorPublications } f
 
 const credentials = [
   ["Designation", "Medical Oncologist"],
-  ["DM Medical Oncology", "JIPMER, Pondicherry (All India Rank 3, INI-SS)"],
+  ["DM Medical Oncology", "JIPMER, Pondicherry"],
   ["MD Medicine", "TNMC & Nair hospital, Mumbai"],
   ["MBBS", "GMERS, Gotri, Vadodara"],
   ["ESMO Certification", "2024 (European Society for Medical Oncology)"],
@@ -216,9 +216,7 @@ const DoctorPage = () => (
               <h2 className="mb-5 text-2xl font-extrabold text-foreground">About Dr. Shreyans Patel</h2>
               <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
                 <p>
-                  Dr. Shreyans Patel completed his MBBS in Vadodara and MD in General Medicine in Mumbai before
-                  pursuing his passion for oncology with a DM in Medical Oncology from JIPMER, Pondicherry —
-                  one of India's most respected medical institutions, where he secured a prestigious All India Rank (AIR) 3 in the national entrance exam.
+                  Dr. Shreyans Patel completed his MBBS in Vadodara and MD in General Medicine in Mumbai. He secured All India Rank (AIR) 3 in "The Institute of National Importance Super Speciality (INI-SS) entrance exam" through which he pursued his passion for oncology with a DM in Medical Oncology from JIPMER, Pondicherry — one of India's most respected medical institutions.
                 </p>
                 <p>
                   In 2024 he earned ESMO certification, aligning his practice with the highest international

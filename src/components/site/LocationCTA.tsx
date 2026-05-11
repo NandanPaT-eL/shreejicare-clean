@@ -167,14 +167,14 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
             >
               <div className="space-y-2">
                 <Label htmlFor="fullName">Full Name</Label>
-                <Input id="fullName" name="entry.577702231" required />
+                <Input id="fullName" name="entry.1573883975" required />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="phoneNumber">Phone Number</Label>
                 <Input
                   id="phoneNumber"
-                  name="entry.550985260"
+                  name="entry.577702231"
                   type="tel"
                   required
                 />
@@ -184,7 +184,7 @@ export const LocationCTA = ({ standalone = false }: LocationCTAProps) => {
                 <Label htmlFor="concern">Your Concern</Label>
                 <Textarea
                   id="concern"
-                  name="entry.1573883975"
+                  name="entry.550985260"
                   className="min-h-[130px]"
                   required
                 />
